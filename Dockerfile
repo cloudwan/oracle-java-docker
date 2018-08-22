@@ -4,5 +4,5 @@ USER		root
 WORKDIR		/
 COPY		["files", "/"]
 ARG		ORACLE_JAVA_INSTALL_VERBOSE=false
-RUN		["/bin/sh", "/oracle_java_install.sh"]
+RUN		/oracle_java_install.sh && rm /oracle_java_install.sh
 ENV		JAVA_HOME="/usr/lib/jvm/java-8-oracle"
